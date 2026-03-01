@@ -1,1 +1,28 @@
+# ==========================================
+# 📦 DEPENDENCIES: MSR BURNOUT PREDICTION
+# ==========================================
 
+# Core Data Science
+pandas==2.2.0
+numpy==1.26.4
+fastparquet==2023.10.1
+
+# Deep Learning & NLP
+torch==2.2.0
+transformers==4.37.2
+scikit-learn==1.4.0
+statsmodels==0.14.1
+spacy==3.7.2
+nltk==3.8.1
+
+# API & Web Scraping
+praw==7.7.1
+requests==2.31.0
+beautifulsoup4==4.12.3
+
+# Visualization
+matplotlib==3.8.2
+seaborn==0.13.2
+
+# Utilities
+tqdm==4.66.2
