@@ -1,1 +1,36 @@
+# ==========================================
+# 🛑 IGNORE FILE FOR BURN-OUT MSR REPOSITORY
+# ==========================================
 
+# Virtual Environments
+venv/
+env/
+.env
+
+# Datasets and Large Files (Hosted on Zenodo)
+data/
+*.csv
+*.parquet
+*.xml
+
+# Deep Learning Models
+models/
+*.pth
+*.h5
+*.pt
+
+# Visual Artifacts (Local generation only)
+plots/
+results/
+*.png
+*.pdf
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
