@@ -28,8 +28,9 @@ def engineer_behavioral_features():
     df = pd.read_parquet(INPUT_GITHUB)
     print(f"[*] Raw telemetry records loaded: {len(df)}")
     
-    print("[*] Filtering out automated accounts and bots...")
+    print("[*] Filtering out automated bots and CI/CD runners...")
     df = df[~df['author_id'].str.contains('bot|actions|dependabot|renovate', case=False, na=False)]
+    print(f"[*] Human telemetry records remaining: {len(df)}")
     
     print("[*] Extracting Boundary Dissolution features (Temporal)...")
     df['date'] = pd.to_datetime(df['date'], utc=True)
@@ -66,3 +67,4 @@ def engineer_behavioral_features():
 if __name__ == "__main__":
 
     engineer_behavioral_features()
+
