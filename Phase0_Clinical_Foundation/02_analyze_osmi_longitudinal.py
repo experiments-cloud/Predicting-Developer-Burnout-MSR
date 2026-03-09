@@ -91,10 +91,17 @@ def analyze_longitudinal_osmi():
     
     plt.fill_between(trend_df['Year'], trend_df['Sought_Treatment_Pct'], trend_df['Fear_of_Consequences_Pct'], color='gray', alpha=0.1)
     
+    avg_masking = trend_df['Fear_of_Consequences_Pct'].mean()
+    avg_treatment = trend_df['Sought_Treatment_Pct'].mean()
+    print(f"\n[*] TEXTBOOK METRICS FOR SECTION 4.1:")
+    print(f"    -> Decade Average Fear of Consequences (Masking): {avg_masking:.1f}%")
+    print(f"    -> Decade Average Sought Treatment: {avg_treatment:.1f}%")
+    
     plt.tight_layout()
     output_path = f'{PLOT_DIR}/osmi_historical_trend_en.png'
     plt.savefig(output_path, dpi=300)
     print(f"[*] Success! English-localized artifact saved to: {output_path}")
 
 if __name__ == "__main__":
+
     analyze_longitudinal_osmi()
