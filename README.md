@@ -10,7 +10,7 @@ This repository contains the replication package for the manuscript: **"Beyond W
 
 Traditional early-warning systems for developer burnout heavily rely on Natural Language Processing (NLP) applied to formal communication channels. However, our research demonstrates that in front-stage professional environments, developers actively sterilize their text due to **Professional Masking** and the fear of negative career consequences, leading to **Semantic Blindness** in predictive algorithms. 
 
-To overcome this, we introduce a **Tetracentric Methodology**, shifting the paradigm from *what developers say* to *how they work*. By mining purely physical operational friction (e.g., Deletion Ratios, Night-Shift Commits, Inter-Arrival Times) from GitHub Version Control Telemetry, we achieve an **84.10% accuracy** in predicting exhaustion, outperforming NLP baselines and proving that behavioral metadata is a superior indicator of occupational burnout.
+To overcome this, we introduce a **Tetracentric Methodology**, shifting the paradigm from *what developers say* to *how they work*. By mining purely physical operational friction (e.g., Deletion Ratios, Night-Shift Commits, Inter-Arrival Times) from GitHub Version Control Telemetry, we achieve an **84.16% accuracy** in predicting exhaustion, outperforming NLP baselines and proving that behavioral metadata is a superior indicator of occupational burnout.
 
 ## 🗂️ Data Availability (Open Science)
 To comply with GitHub's file size limits and ensure research reproducibility, all massive datasets (including the anonymized Stack Overflow XML, Reddit NLP-ready corpora, and the 119k+ GitHub commits dataset) are securely hosted on **Zenodo**.
@@ -27,10 +27,10 @@ Establishes the clinical and statistical foundation of the "Professional Masking
 Demonstrates the empirical failure of NLP in formal environments (Stack Overflow). It includes the massive XML parsing, strict 50/50 dataset balancing, and the Multimodal Deep Learning (DistilBERT) evaluation that validates the *gradient starvation* hypothesis (~0.693 Loss).
 
 ### `Phase2_Anonymous_Validation/`
-Explores the "Back-Stage" (Reddit). It proves that while anonymous developers *do* explicitly confess burnout (via Semantic Mining), social media longitudinal metadata contains too much stochastic noise to be used as a reliable early-warning system (yielding ~29.41% accuracy).
+Explores the "Back-Stage" (Reddit). It proves that while anonymous developers *do* explicitly confess burnout (via Semantic Mining), social media longitudinal metadata contains too much stochastic noise to be used as a reliable early-warning system (yielding ~35.29% accuracy).
 
 ### `Phase3_Behavioral_Telemetry/` (Core Contribution)
-Contains the Mining Software Repositories (MSR) pipeline. It extracts behavioral signals from GitHub, uses K-Means to establish a 13.5% Burnout Ground Truth, and trains the Deep Learning Temporal Oracle (LSTM) vs. the Static Baseline (Random Forest). Concludes with the McNemar Statistical Test ($p=0.17$).
+Contains the Mining Software Repositories (MSR) pipeline. It extracts behavioral signals from GitHub, uses K-Means to establish a 11.8% Burnout Ground Truth, and trains the Deep Learning Temporal Oracle (LSTM) vs. the Static Baseline (Random Forest). Concludes with the McNemar Statistical Test ($p=0.75$).
 
 ### `Phase4_Macroeconomic_Context/`
 Provides ecological validity by applying a Time-Travel extraction heuristic on Hacker News to correlate burnout discussion volume with global industry crises (COVID-19 Remote Shift and the 2022 Generative AI / Big Tech Layoffs).
