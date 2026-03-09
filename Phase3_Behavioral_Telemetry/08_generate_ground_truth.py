@@ -6,7 +6,7 @@ Description:
 Applies unsupervised learning (K-Means) over the engineered behavioral metrics 
 to establish the Ground Truth. Since VCS platforms lack clinical psychometric labels, 
 this algorithm isolates the anomalous cluster (characterized by high operational friction 
-and severe night-shifts) representing the 13.5% of developers experiencing Burnout.
+and severe night-shifts) representing the 11.8% of developers experiencing Burnout.
 """
 
 import os
@@ -60,4 +60,5 @@ def discover_burnout_clusters():
     print("[*] Success! Labeled dataset saved for Phase 4.")
 
 if __name__ == "__main__":
+
     discover_burnout_clusters()
