@@ -154,11 +154,12 @@ def train_multimodal_network():
         print(f"[*] Epoch {epoch+1} Completed | Loss: {avg_loss:.4f} | Val Acc: {acc:.4f}")
         
         # Expected behavior: Loss stagnates at ~0.693 due to Professional Masking
-        if round(avg_loss, 2) == 0.69:
+        if round(avg_loss, 2) == 0.693:
             print("[!] Warning: Gradient Starvation detected. The formal environment lacks predictive signal.")
             
     os.makedirs(os.path.dirname(MODEL_SAVE_PATH), exist_ok=True)
     torch.save(model.state_dict(), MODEL_SAVE_PATH)
 
 if __name__ == "__main__":
+
     train_multimodal_network()
