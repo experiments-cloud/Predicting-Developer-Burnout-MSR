@@ -22,7 +22,7 @@ warnings.filterwarnings("ignore")
 # REDDIT LSTM HYPERPARAMETERS 
 # =====================================================================
 INPUT_FILE = './data/processed/reddit_engineered.parquet'
-SEQ_LEN = 5          
+SEQ_LEN = 3          
 BATCH_SIZE = 16      
 EPOCHS = 50          
 LEARNING_RATE = 1e-3
@@ -104,5 +104,6 @@ def evaluate_social_noise():
 if __name__ == "__main__":
 
     evaluate_social_noise()
+
 
 
