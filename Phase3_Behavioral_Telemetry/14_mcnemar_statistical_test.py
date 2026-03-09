@@ -27,7 +27,7 @@ warnings.filterwarnings("ignore")
 # STATISTICAL TEST CONFIGURATION 
 # =====================================================================
 INPUT_FILE = './data/processed/github_mass_engineered.parquet'
-SEQ_LEN = 3       # Reduced to maximize sample availability
+SEQ_LEN = 5       # Reduced to maximize sample availability
 EPOCHS = 35       
 LEARNING_RATE = 1e-3
 
@@ -148,4 +148,5 @@ def run_statistical_competition():
         print("    Industry deployment can rely on lighter algorithms using MSR behavioral data.")
 
 if __name__ == "__main__":
+
     run_statistical_competition()
