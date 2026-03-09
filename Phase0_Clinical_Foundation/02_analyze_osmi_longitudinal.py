@@ -1,6 +1,6 @@
 """
 Phase 0: Clinical Foundation & Problem Statement
-Script: 02_analyze_osmi_longitudinal.py
+Script: 01_analyze_osmi_longitudinal.py
 
 Description:
 Applies a fuzzy-matching heuristic to unify shifting schema structures across 
@@ -105,3 +105,4 @@ def analyze_longitudinal_osmi():
 if __name__ == "__main__":
 
     analyze_longitudinal_osmi()
+
